@@ -124,3 +124,7 @@ def food_chatbot(request: UserPrompt):
         "llm_response": response.choices[0].message.content,
         "image_url": best_match.get('image', None)
     }
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=8000)
